@@ -14,7 +14,7 @@ private:
 	unsigned int _size;
 public:
 	Array(unsigned int size = 0): _arr(new T[size]()), _size(size){}
-	~Array(){}
+	~Array(){delete[] _arr;}
 	unsigned int size() const {return _size;};
 
 	Array(const Array& other);
